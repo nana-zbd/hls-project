@@ -1,0 +1,13 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../src/fir_tb.cpp in debug mode
+   Compiling ../../../../../src/fir_error_syntax.cpp in debug mode
+csim.mk:94: recipe for target 'obj/fir_error_syntax.o' failed
+../../../../../src/fir_error_syntax.cpp:20:13: error: expected ';' after expression
+    *y = acc  // Missing semicolon
+            ^
+            ;
+1 error generated.
+make: *** [obj/fir_error_syntax.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

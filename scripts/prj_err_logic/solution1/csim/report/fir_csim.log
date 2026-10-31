@@ -1,0 +1,27 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../src/fir_tb.cpp in debug mode
+   Compiling ../../../../../src/fir_error_logic.cpp in debug mode
+   Generating csim.exe
+Input: 0, Output: 1077935935
+Input: 2, Output: -2143283354
+Input: 4, Output: -1610511601
+Input: 6, Output: 872564473
+Input: 8, Output: -52625
+Input: 10, Output: -1076879244
+Input: 12, Output: 1070721433
+Input: 14, Output: -1073958649
+Input: 16, Output: -1074111369
+Input: 18, Output: 1107448671
+Input: 20, Output: -1077925676
+Input: 22, Output: 339403168
+Input: 24, Output: 339417917
+Input: 26, Output: 2064061230
+Input: 28, Output: 1124150422
+Input: 30, Output: 260514069
+Input: 32, Output: 27780746
+Input: 34, Output: -1033249152
+Input: 36, Output: 67178021
+Input: 38, Output: 79769100
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

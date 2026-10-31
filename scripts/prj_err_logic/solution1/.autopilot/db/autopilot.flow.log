@@ -1,0 +1,50 @@
+INFO-FLOW: Workspace C:/Users/34226/Desktop/hls_project/scripts/prj_err_logic/solution1 opened at Sat Oct 31 15:52:14 +0800 2026
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute   set_part xc7a35tcsg324-1 
+INFO: [HLS 200-1510] Running: set_part xc7a35tcsg324-1 
+Execute     create_platform xc7a35tcsg324-1 -board  
+DBG:HLSDevice: Trying to load device library: D:/Xilinx/Vitis/2024.2\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Xilinx/Vivado/2024.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7a35t-csg324-1'
+Command     create_platform done; 0.814 sec.
+Execute     source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Xilinx/Vitis/2024.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7a35t-csg324-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.879 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute     ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   csim_design -clean 
+INFO: [HLS 200-1510] Running: csim_design -clean 
+Execute     ::AP::init_summary_file csim 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     source D:/Xilinx/Vitis/2024.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source D:/Xilinx/Vitis/2024.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute       source D:/Xilinx/Vitis/2024.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute     ap_part_info -name xc7a35t-csg324-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.141 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 0.834 sec.
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:00; Allocated memory: 1.137 MB.
+Command ap_source done; 1.753 sec.
+Execute cleanup_all 

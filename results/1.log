@@ -1,0 +1,166 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sun Nov  1 14:43:56 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user '34226' on host 'laptop-dtgvhfc0' (Windows NT_amd64 version 10.0) on Sun Nov 01 14:43:56 +0800 2026
+INFO: [HLS 200-10] In directory 'C:/Users/34226/Desktop/hls_project/scripts'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+INFO: [HLS 200-1510] Running: open_project prj_1 
+INFO: [HLS 200-10] Creating and opening project 'C:/Users/34226/Desktop/hls_project/scripts/prj_1'.
+INFO: [HLS 200-1510] Running: set_top matrixMul 
+INFO: [HLS 200-1510] Running: add_files C:/Users/34226/Desktop/hls_project/src/1_kernel.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/34226/Desktop/hls_project/src/1_kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb C:/Users/34226/Desktop/hls_project/src/1_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/34226/Desktop/hls_project/src/1_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a35tcsg324-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a35t-csg324-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../src/1_tb.cpp in debug mode
+   Compiling ../../../../../src/1_kernel.cpp in debug mode
+   Generating csim.exe
+Result OK
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:06; Allocated memory: 1.168 MB.
+CSIM_PASS
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.076 seconds; current allocated memory: 260.129 MB.
+INFO: [HLS 200-10] Analyzing design file '../src/1_kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.147 seconds; current allocated memory: 262.617 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 495 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 209 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 209 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 209 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 257 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 259 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_1/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_16_3' is marked as complete unroll implied by the pipeline pragma (../src/1_kernel.cpp:16:18)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_18_4' is marked as complete unroll implied by the pipeline pragma (../src/1_kernel.cpp:18:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_20_5' is marked as complete unroll implied by the pipeline pragma (../src/1_kernel.cpp:20:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_9_1' is marked as complete unroll implied by the pipeline pragma (../src/1_kernel.cpp:9:17)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_11_2' is marked as complete unroll implied by the pipeline pragma (../src/1_kernel.cpp:11:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_16_3' (../src/1_kernel.cpp:16:18) in function 'matrixMul' completely with a factor of 4 (../src/1_kernel.cpp:4:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_18_4' (../src/1_kernel.cpp:18:19) in function 'matrixMul' completely with a factor of 4 (../src/1_kernel.cpp:4:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_20_5' (../src/1_kernel.cpp:20:20) in function 'matrixMul' completely with a factor of 4 (../src/1_kernel.cpp:4:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_9_1' (../src/1_kernel.cpp:9:17) in function 'matrixMul' completely with a factor of 4 (../src/1_kernel.cpp:4:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_11_2' (../src/1_kernel.cpp:11:19) in function 'matrixMul' completely with a factor of 4 (../src/1_kernel.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (../src/1_kernel.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (../src/1_kernel.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (../src/1_kernel.cpp:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.386 seconds; current allocated memory: 264.445 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 264.445 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 268.418 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 269.523 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrixMul' (../src/1_kernel.cpp:3:1)...48 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 289.895 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 289.906 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixMul' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixMul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrixMul'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, function 'matrixMul'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.409 seconds; current allocated memory: 289.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 289.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixMul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_0_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_1_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_2_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_3_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_3_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_3_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/A_3_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_0_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_1_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_2_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_3_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_3_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_3_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/B_3_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_2_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_2_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_2_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_2_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_3_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_3_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_3_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixMul/C_3_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixMul' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixMul' pipeline 'matrixMul' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixMul'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.018 seconds; current allocated memory: 294.000 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.361 seconds; current allocated memory: 300.996 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.491 seconds; current allocated memory: 304.387 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixMul.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixMul.
+INFO: [HLS 200-789] **** Estimated Fmax: 138.75 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:11; Allocated memory: 44.766 MB.
+CSYNTH_PASS
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 22.094 seconds; peak allocated memory: 304.578 MB.

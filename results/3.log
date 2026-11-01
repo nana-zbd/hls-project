@@ -1,0 +1,218 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sun Nov  1 14:44:36 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user '34226' on host 'laptop-dtgvhfc0' (Windows NT_amd64 version 10.0) on Sun Nov 01 14:44:36 +0800 2026
+INFO: [HLS 200-10] In directory 'C:/Users/34226/Desktop/hls_project/scripts'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+INFO: [HLS 200-1510] Running: open_project prj_3 
+INFO: [HLS 200-10] Creating and opening project 'C:/Users/34226/Desktop/hls_project/scripts/prj_3'.
+INFO: [HLS 200-1510] Running: set_top bubble_sort 
+INFO: [HLS 200-1510] Running: add_files C:/Users/34226/Desktop/hls_project/src/3_kernel.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/34226/Desktop/hls_project/src/3_kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb C:/Users/34226/Desktop/hls_project/src/3_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/34226/Desktop/hls_project/src/3_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a35tcsg324-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a35t-csg324-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../src/3_tb.cpp in debug mode
+   Compiling ../../../../../src/3_kernel.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../../src/3_tb.cpp:2:
+In file included from D:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from D:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from D:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../src/3_kernel.cpp:1:
+In file included from D:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from D:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from D:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+All tests passed!
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:02; Allocated memory: 1.109 MB.
+CSIM_PASS
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.061 seconds; current allocated memory: 260.180 MB.
+INFO: [HLS 200-10] Analyzing design file '../src/3_kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.22 seconds; current allocated memory: 262.660 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 91 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 46 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 69 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 70 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 125 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 111 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 131 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 148 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-248] Applying array_partition to 'in': Block partitioning with factor 4 on dimension 1. (../src/3_kernel.cpp:3:0)
+INFO: [HLS 214-248] Applying array_partition to 'out': Block partitioning with factor 4 on dimension 1. (../src/3_kernel.cpp:3:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_7_1> at ../src/3_kernel.cpp:7:21 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_18_4> at ../src/3_kernel.cpp:18:22 
+INFO: [HLS 214-437] Automatically disabling loop flattening for loop 'VITIS_LOOP_8_2'. (../src/3_kernel.cpp:8:21)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'tmp' due to pipeline pragma (../src/3_kernel.cpp:10:9)
+INFO: [HLS 214-248] Applying array_partition to 'tmp': Cyclic partitioning with factor 2 on dimension 1. (../src/3_kernel.cpp:6:13)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.969 seconds; current allocated memory: 264.297 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 264.297 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 268.750 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 269.977 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 291.328 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 311.906 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bubble_sort' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bubble_sort_Pipeline_VITIS_LOOP_7_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_7_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_7_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 315.402 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 316.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bubble_sort_Pipeline_VITIS_LOOP_9_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_3'.
+WARNING: [HLS 200-880] The II Violation in module 'bubble_sort_Pipeline_VITIS_LOOP_9_3' (loop 'VITIS_LOOP_9_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('tmp_addr_1_write_ln14', ../src/3_kernel.cpp:14) of variable 'select_ln11', ../src/3_kernel.cpp:11 on array 'tmp' and 'load' operation 16 bit ('mux_case_03', ../src/3_kernel.cpp:11) on array 'tmp'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_9_3'
+WARNING: [HLS 200-871] Estimated clock period (7.743 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+Resolution: For help on HLS 200-871 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'bubble_sort_Pipeline_VITIS_LOOP_9_3' consists of the following:
+	'load' operation 16 bit ('mux_case_03', ../src/3_kernel.cpp:11) on array 'tmp' [24]  (2.152 ns)
+	'select' operation 16 bit ('select_ln11', ../src/3_kernel.cpp:11) [26]  (1.293 ns)
+	'icmp' operation 1 bit ('icmp_ln11', ../src/3_kernel.cpp:11) [32]  (2.146 ns)
+	'store' operation 0 bit ('tmp_1_addr_write_ln13', ../src/3_kernel.cpp:13) of variable 'select_ln11_1', ../src/3_kernel.cpp:11 on array 'tmp_1' [41]  (2.152 ns)
+
+Resolution: For help on HLS 200-1016 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.143 seconds; current allocated memory: 316.707 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 316.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bubble_sort_Pipeline_VITIS_LOOP_18_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_18_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.117 seconds; current allocated memory: 316.727 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 316.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bubble_sort' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 316.777 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 316.812 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bubble_sort_Pipeline_VITIS_LOOP_7_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bubble_sort_Pipeline_VITIS_LOOP_7_1' pipeline 'VITIS_LOOP_7_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bubble_sort_Pipeline_VITIS_LOOP_7_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 318.625 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bubble_sort_Pipeline_VITIS_LOOP_9_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bubble_sort_Pipeline_VITIS_LOOP_9_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 319.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bubble_sort_Pipeline_VITIS_LOOP_18_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bubble_sort_Pipeline_VITIS_LOOP_18_4' pipeline 'VITIS_LOOP_18_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bubble_sort_Pipeline_VITIS_LOOP_18_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 320.852 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bubble_sort' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'bubble_sort/in_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bubble_sort/in_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bubble_sort/in_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bubble_sort/in_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bubble_sort/out_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bubble_sort/out_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bubble_sort/out_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bubble_sort/out_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'bubble_sort' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bubble_sort'.
+INFO: [RTMG 210-278] Implementing memory 'bubble_sort_tmp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.235 seconds; current allocated memory: 322.148 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 326.121 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.483 seconds; current allocated memory: 328.320 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for bubble_sort.
+INFO: [VLOG 209-307] Generating Verilog RTL for bubble_sort.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 129.15 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 68.809 MB.
+CSYNTH_PASS
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 15.888 seconds; peak allocated memory: 328.637 MB.

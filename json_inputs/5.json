@@ -1,0 +1,4 @@
+{
+  "kernel": "#include <ap_int.h>\nvoid vector_sum(ap_int<32> data[32], ap_int<32> &sum) {\n#pragma HLS INTERFACE ap_ctrl_none port=return\n#pragma HLS INTERFACE s_axilite port=data\n#pragma HLS INTERFACE ap_none port=sum\n#pragma HLS PIPELINE II=1\n\tap_int<32> s = 0;\n\tfor(int i = 0; i < 32; ++i) {\n\t\t#pragma HLS UNROLL\n\t\ts += data[i];\n\t}\n\tsum = s;\n}",
+  "testbench": "#include <stdio.h>\n#include <ap_int.h>\nvoid vector_sum(ap_int<32> data[32], ap_int<32> &sum);\nint main() {\n\tap_int<32> data[32], out_sum;\n\tap_int<32> golden = 0;\n\tfor(int i = 0; i < 32; ++i) {\n\t\tdata[i] = i % 256;\n\t\tgolden += data[i];\n\t}\n\tvector_sum(data, out_sum);\n\tif(out_sum != golden) {\n\t\tprintf(\"Testbench failed!\\n\");\n\t\tprintf(\"Expected: %d Got: %d\\n\", (int)golden, (int)out_sum);\n\t\treturn -1;\n\t}\n\tprintf(\"All tests passed!\\n\");\n\treturn 0;\n}"
+}

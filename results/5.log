@@ -1,0 +1,155 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sun Nov  1 14:45:09 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user '34226' on host 'laptop-dtgvhfc0' (Windows NT_amd64 version 10.0) on Sun Nov 01 14:45:10 +0800 2026
+INFO: [HLS 200-10] In directory 'C:/Users/34226/Desktop/hls_project/scripts'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: source run_hls.tcl
+INFO: [HLS 200-1510] Running: open_project prj_5 
+INFO: [HLS 200-10] Creating and opening project 'C:/Users/34226/Desktop/hls_project/scripts/prj_5'.
+INFO: [HLS 200-1510] Running: set_top vector_sum 
+INFO: [HLS 200-1510] Running: add_files C:/Users/34226/Desktop/hls_project/src/5_kernel.cpp 
+INFO: [HLS 200-10] Adding design file 'C:/Users/34226/Desktop/hls_project/src/5_kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb C:/Users/34226/Desktop/hls_project/src/5_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/34226/Desktop/hls_project/src/5_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a35tcsg324-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7a35t-csg324-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../src/5_tb.cpp in debug mode
+   Compiling ../../../../../src/5_kernel.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../../src/5_tb.cpp:2:
+In file included from D:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from D:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from D:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../src/5_kernel.cpp:1:
+In file included from D:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from D:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from D:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from D:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+All tests passed!
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:02; Allocated memory: 1.176 MB.
+CSIM_PASS
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 260.086 MB.
+INFO: [HLS 200-10] Analyzing design file '../src/5_kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.192 seconds; current allocated memory: 262.539 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 50 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 102 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 104 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Users/34226/Desktop/hls_project/scripts/prj_5/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_8_1' is marked as complete unroll implied by the pipeline pragma (../src/5_kernel.cpp:8:18)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_8_1' (../src/5_kernel.cpp:8:18) in function 'vector_sum' completely with a factor of 32 (../src/5_kernel.cpp:2:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 6.855 seconds; current allocated memory: 264.195 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 264.195 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 267.539 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 268.648 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'vector_sum' (../src/5_kernel.cpp:2:1)...31 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 288.969 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 289.004 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_sum' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'vector_sum'.
+WARNING: [HLS 200-885] The II Violation in module 'vector_sum' (function 'vector_sum'): Unable to schedule 'load' operation 32 bit ('s', ../src/5_kernel.cpp:10) on array 'data' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'data'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_sum' (function 'vector_sum'): Unable to schedule 'load' operation 32 bit ('data_load_28', ../src/5_kernel.cpp:10) on array 'data' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'data'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_sum' (function 'vector_sum'): Unable to schedule 'load' operation 32 bit ('data_load_29', ../src/5_kernel.cpp:10) on array 'data' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'data'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_sum' (function 'vector_sum'): Unable to schedule 'load' operation 32 bit ('data_load_30', ../src/5_kernel.cpp:10) on array 'data' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'data'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_sum' (function 'vector_sum'): Unable to schedule 'load' operation 32 bit ('data_load_21', ../src/5_kernel.cpp:10) on array 'data' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'data'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_sum' (function 'vector_sum'): Unable to schedule 'load' operation 32 bit ('data_load_1', ../src/5_kernel.cpp:10) on array 'data' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'data'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'vector_sum' (function 'vector_sum'): Unable to schedule 'load' operation 32 bit ('data_load_9', ../src/5_kernel.cpp:10) on array 'data' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'data'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 32, Depth = 35, function 'vector_sum'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 289.004 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 289.004 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_sum/data' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_sum/sum' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'sum' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_sum' to 'ap_ctrl_none'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_sum' pipeline 'vector_sum' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Bundling port 'data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_sum'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.311 seconds; current allocated memory: 289.844 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.351 seconds; current allocated memory: 294.789 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.503 seconds; current allocated memory: 297.211 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_sum.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_sum.
+INFO: [HLS 200-789] **** Estimated Fmax: 167.81 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:11; Allocated memory: 37.727 MB.
+CSYNTH_PASS
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 14.892 seconds; peak allocated memory: 297.520 MB.
